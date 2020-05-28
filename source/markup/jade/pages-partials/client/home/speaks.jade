@@ -1,0 +1,43 @@
+section.section.section-speaks#speaks
+  .main-wrapper
+    .speaks
+      h2.speaks__title О нас говорят:
+      .speaks-slider.speaks-slider-1
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/speaks/speaks-1.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/speaks/speaks-2.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/speaks/speaks-3.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/speaks/speaks-4.png").speaks__image
+
+
+  script.
+    $(function () {
+      $('.speaks-slider-1').slick({
+        slidesToShow: 4,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        swipe: true,
+        responsive: [
+          {
+            breakpoint: 1260,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 720,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      })
+    });

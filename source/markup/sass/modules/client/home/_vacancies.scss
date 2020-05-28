@@ -1,0 +1,151 @@
+.section-vacancies {
+
+ .main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 0 100px 630px;
+  @include tablet {
+   padding: 120px 0 100px;
+  }
+  @include mobile {
+   padding: 50px 0;
+  }
+ }
+
+ &.section-vacancies--telegram {
+
+  .main-wrapper {
+   @include tablet-mobile {
+    background: none;
+   }
+   @include tablet {
+    min-height: 0;
+   }
+   @include mobile {
+    padding-bottom: 360px;
+   }
+  }
+ }
+}
+
+.vacancies-phone {
+ width: 579px;
+ height: 621px;
+ background: url(../img/home/telegram/phone-big.png) no-repeat center bottom / contain;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ @include tablet {
+  width: 400px;
+  height: 429px;
+  left: auto;
+  right: 0;
+ }
+ @include mobile {
+  width: 300px;
+  height: 322px;
+  left: calc(50% - 150px);
+ }
+
+ .vacancies-phone__inner {
+  width: 326px;
+  height: 534px;
+  background: #1D1D1D;
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 163px);
+  overflow: hidden;
+  @include tablet {
+   width: 225px;
+   height: 369px;
+   left: calc(50% - 113px);
+  }
+  @include mobile {
+   width: 169px;
+   height: 278px;
+   left: calc(50% - 85px);
+  }
+ }
+}
+
+.vacancies-phone-slider {
+
+}
+.vacancies-phone-slide {
+
+ .vacancies-phone-slide__inner {
+  height: 534px;
+  border-radius: 35px 35px 0 0;
+  background: no-repeat center top / cover;
+  overflow: hidden;
+  @include tablet {
+   height: 369px;
+  }
+  @include mobile {
+   height: 278px;
+  }
+ }
+}
+
+.vacancies {
+ position: relative;
+
+ .devices-illustration {
+  top: -80px;
+  right: 710px;
+  @include tablet-mobile {
+   top: auto;
+   right: auto;
+  }
+  @include tablet {
+   margin-top: 40px;
+  }
+  @include mobile {
+   margin-top: 20px;
+  }
+ }
+
+ .vacancies__title {
+  position: relative;
+  &:before {
+   @extend .bg-text;
+   content: 'вакансии';
+   color: #000;
+   left: 127px;
+   @include tablet {
+    left: -174px;
+   }
+   @include mobile {
+    left: -46px;
+   }
+  }
+ }
+ .vacancies__text {
+  max-width: 540px;
+  margin-top: 16px;
+  @include tablet {
+   max-width: 400px;
+   font-size: 14px;
+   margin-top: 40px;
+  }
+ }
+
+ .vacancies__btn {
+  margin-top: 54px;
+  @include mobile {
+   margin-top: 30px;
+  }
+ }
+
+ &.vacancies--telegram {
+
+  .vacancies__title {
+   &:before {
+    content: 'Telegram';
+   }
+  }
+ }
+}

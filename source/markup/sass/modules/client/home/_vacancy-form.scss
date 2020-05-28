@@ -1,0 +1,29 @@
+.section-vacancy-form {
+ background: #F7F6FF;
+ padding: 82px 0;
+ @include mobile {
+  padding: 60px 0;
+ }
+}
+
+.vacancy-form {
+
+ .vacancy-form__title {
+  font-family: DINProCond, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #080808;
+  margin-bottom: 87px;
+  @include tablet {
+   font-size: 60px;
+   margin-bottom: 50px;
+  }
+  @include mobile {
+   font-size: 34px;
+   margin-bottom: 40px;
+  }
+ }
+}

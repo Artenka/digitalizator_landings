@@ -1,0 +1,59 @@
+.section-speaks {
+ background: #fff;
+ padding: 20px 0;
+}
+
+.speaks {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+ .speaks__title {
+  font-family: DINProCond, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #080808;
+  @include mobile {
+   font-size: 17px;
+  }
+ }
+
+ .speaks__image {
+  filter: grayscale(1);
+  transition: 0.5s;
+  &:hover {
+   filter: grayscale(0);
+  }
+ }
+}
+
+.speaks-slider {
+ width: 1020px;
+ @include tablet {
+  width: 520px;
+ }
+ @include mobile {
+  width: 210px;
+ }
+}
+
+.speaks-slide {
+
+ .speaks-slide__inner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+   height: 40px;
+  }
+ }
+
+ .speaks__image {
+  max-width: 80%;
+  display: block;
+ }
+}

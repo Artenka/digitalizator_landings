@@ -1,0 +1,184 @@
+.btn-platform {
+ display: inline-block;
+ background: #FFD300;
+ font-family: Dinpro, sans-serif;
+ font-size: 16px;
+ text-align: center;
+ letter-spacing: 0.03em;
+ text-transform: uppercase;
+ color: #000;
+ font-weight: 700;
+ padding: 17px 28px;
+ transition: 0.5s;
+ @include mobile {
+  font-size: 13px;
+  padding: 15px 20px;
+ }
+
+ &.btn-platform--transparent {
+  background: transparent;
+  border: 2px solid #B4B4B4;
+  color: #B4B4B4;
+  &:hover {
+   border-color: #FFD300;
+   background: #FFD300;
+   color: #000;
+  }
+ }
+
+ &.btn-platform--line {
+  min-width: 278px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  @include mobile {
+   min-width: 0;
+  }
+
+  i {
+   width: 35px;
+   height: 1px;
+   background: #0B0B0B;
+   margin-left: 20px;
+   @include mobile {
+    width: 20px;
+    margin-left: 10px;
+   }
+  }
+ }
+
+ &.btn-platform--rounded {
+  border-radius: 21px;
+  font-size: 12px;
+  line-height: 122%;
+  font-weight: 400;
+  text-transform: none;
+  padding: 8px 36px;
+ }
+
+ &.btn-platform--2 {
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: none;
+  padding: 14px 30px;
+
+  &.btn-platform--2-bordered {
+   border: 1px solid #FFD300;
+   background: #fff;
+   &:hover {
+    background: #FFD300;
+   }
+  }
+ }
+
+ &.btn-platform--3 {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  padding: 21px 42px;
+  @include mobile {
+   padding: 15px 20px;
+  }
+ }
+
+ &.btn-platform--4 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  text-transform: none;
+  padding: 22px 32px;
+  @include mobile {
+   font-size: 14px;
+   line-height: 16px;
+   padding: 15px 20px;
+  }
+ }
+
+ &.btn-platform--5 {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  text-transform: none;
+  border-radius: 3px;
+  padding: 27px 60px;
+  @include tablet-mobile {
+   padding: 21px 25px;
+  }
+  &:hover {
+   transform: scale(1.02);
+  }
+
+  &.btn-platform--5-md {
+   padding: 22px 35px;
+   @include mobile {
+    padding: 15px 25px;
+   }
+  }
+  &.btn-platform--5-sm {
+   padding: 16px 20px;
+   @include mobile {
+    padding: 12px 15px;
+   }
+  }
+
+  &.btn-platform--5-gray {
+   background: #DBDBDB;
+   color: #A9A9A9;
+   &:hover {
+    transform: initial;
+    cursor: initial;
+   }
+  }
+ }
+}
+
+.btn-platform-digitalizator {
+ @extend .btn-platform;
+ width: 250px;
+ min-height: 56px;
+ display: block;
+ background: url(../../img/client/login/login-submit.svg) no-repeat left bottom, #FFD300;
+ font-size: 12px;
+ line-height: 15px;
+ padding: 10px 0 10px 20px;
+
+ span {
+  font-size: 15px;
+  line-height: 21px;
+ }
+
+ &.btn-platform--line {
+  display: flex;
+  background: #FFD300;
+  font-size: 16px;
+  line-height: normal;
+  padding: 17px 28px;
+ }
+}
+
+.delete-btn, .edit-btn {
+ width: 20px;
+ height: 20px;
+ background: no-repeat center / contain;
+ transition: 0.5s;
+ cursor: pointer;
+ &:hover {
+  opacity: 1;
+ }
+}
+.delete-btn {
+ background-image: url(../../img/admin/common/delete-icon.svg);
+}
+.edit-btn {
+ background-image: url(../../img/admin/common/edit-icon-3.svg);
+}
+
+
+.btn-platform-layout {
+
+ &.btn-platform-layout--center {
+  text-align: center;
+ }
+}

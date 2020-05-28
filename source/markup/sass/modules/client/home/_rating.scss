@@ -1,0 +1,116 @@
+.section-rating {
+ background: #1D1D1D;
+
+ .main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 170px 0 100px;
+  @include tablet {
+   padding: 120px 0 100px;
+  }
+  @include mobile {
+   padding: 50px 0;
+  }
+ }
+}
+
+.rating {
+ position: relative;
+
+ .devices-illustration {
+  top: -90px;
+  left: 720px;
+  @include tablet-mobile {
+   top: auto;
+   left: auto;
+  }
+  @include tablet {
+   margin-top: 40px;
+  }
+  @include mobile {
+   margin-top: 20px;
+  }
+ }
+
+ .rating__title {
+  max-width: 520px;
+  position: relative;
+  &:before {
+   @extend .bg-text;
+   content: 'рейтинг';
+  }
+ }
+
+ .rating__text {
+  max-width: 400px;
+  margin-top: 5px;
+ }
+
+ .rating__text-2 {
+  max-width: 540px;
+  margin-top: 50px;
+  @include mobile {
+   margin-top: 20px;
+  }
+ }
+
+ .rating__btn {
+  position: absolute;
+  bottom: 0;
+  left: 735px;
+  @include tablet-mobile {
+   position: relative;
+   left: auto;
+  }
+  @include tablet {
+   margin-top: 40px;
+  }
+  @include mobile {
+   margin-top: 20px;
+  }
+ }
+
+ &.rating--study {
+
+  .rating__title {
+   &:before {
+    content: 'Обучение';
+   }
+  }
+ }
+}
+
+.rating-list {
+ max-width: 700px;
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 24px;
+ @include mobile {
+  margin-top: 16px;
+ }
+}
+.rating-item {
+ border: 1px solid rgba(255, 255, 255, 0.25);
+ border-radius: 5px;
+ font-size: 12px;
+ line-height: 160%;
+ padding: 15px 20px;
+ margin: 0 16px 20px 0;
+ transition: 1s;
+ @include mobile {
+  padding: 7px 10px;
+  margin: 0 8px 10px 0;
+ }
+
+ &.rating-item--text {
+
+  &, &.rating-item--active {
+   border: none;
+  }
+ }
+ &.rating-item--active {
+  border-color: #FFD300;
+ }
+}

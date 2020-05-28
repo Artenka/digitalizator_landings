@@ -1,0 +1,76 @@
+section.section.section-soc-reviews
+  .main-wrapper
+    .soc-reviews
+      h2.subtitle.soc-reviews-title Что говорят участники платформы
+
+      .soc-reviews-slider
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-8.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-1.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-2.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-3.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-4.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-5.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-6.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-7.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-9.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-10.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-11.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-12.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-13.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-14.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-15.jpg")
+        .soc-reviews-slide
+          .soc-review
+            img(src="img/home/soc-reviews/soc-review-16.jpg")
+
+
+  script.
+    $(function () {
+      $('.soc-reviews-slider').slick({
+        slidesToShow: 2,
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        swipe: true,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 720,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      })
+    });

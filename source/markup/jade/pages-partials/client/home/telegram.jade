@@ -1,0 +1,37 @@
+section.section.section--yellow.section-vacancies.section-vacancies--telegram
+  .main-wrapper
+    .vacancies-phone
+      .vacancies-phone__inner
+        .vacancies-phone-slider
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-1.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-2.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-3.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-4.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-5.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-6.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-7.jpg)")
+          .vacancies-phone-slide
+            .vacancies-phone-slide__inner(style="background-image: url(img/home/telegram/telegram-8.jpg)")
+    .vacancies.vacancies--telegram
+      h2.subtitle.vacancies__title Доступ в закрытое<br> Telegram-сообщество
+      p.vacancies__text Здесь на ежедневной основе все участники платформы имеют доступ непосредственно к «движухе» - это и общение, и поиск ответов на вопросы, и рекомендации, и потенциальные клиенты и сотрудники.
+      a(href="https://platform.digitalizator.club/registration").btn.btn--black.vacancies__btn.registration-link Выбрать Пакет
+
+
+  script.
+    $(function () {
+      $('.vacancies-phone-slider').slick({
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 8000,
+        swipe: true
+      })
+    });

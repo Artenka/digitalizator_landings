@@ -1,0 +1,113 @@
+section#vacancy-form.section.section-vacancy-form
+  .main-wrapper
+    .vacancy-form
+      h2.vacancy-form__title поможем вам в поиске:
+
+      .profile.profile--new
+        .profile-layout
+          .profile-layout__col
+            .profile-block.profile-block--vacancies
+              .profile-block__header.profile-block__header--yellow
+                h2.title-2.profile-block__header-title о компании
+              .profile-block__main
+                .profile-form
+                  .profile-form-right
+                    .formblock
+                      .formgroup.formgroup--2
+                        label Информация о компании
+                        textarea(name='aboutCompany', placeholder='Укажите чем занимаетесь вы/ваша компания. В чем ваши сильные стороны и преимущества. Описание должно быть не более 600 символов.', maxlength='600' style="min-height: 120px;")
+                      .formgroup-layout-flex.m-t-30
+                        .formgroup.formgroup--2
+                          label Контактный телефон *
+                          input.input--bordered(name='aboutPhone', placeholder='+38')
+                        .formgroup.formgroup--2
+                          label Контактное лицо *
+                          input.input--bordered(name='aboutName', placeholder='Введите имя')
+                  .profile-form-left
+                    .profile-form-avatar
+                      #preview-new.profile-form-avatar__image(style='background-image: url()')
+                      input#logo-new.file-avatar.hidden.logo(type='file', data-multiple-caption='{count} files selected', accept='image/jpeg,image/png,image/gif,image/bmp')
+                      input#logoPath-new.hidden(name='logo', type='text')
+                      button.btn-platform.profile-form-avatar-btn(type='button', onclick="uploadBtn('new');") загрузить лого
+                    // button#deleteAvatar(type="button").popup-link.profile-form-avatar-delete удалить
+                .formblock.m-t-30
+                  .formgroup.formgroup--2
+                    label.m-b-30 Необходима ли помощь в какой-то из нижеприведенных задач?
+                  .custom-radio.custom-radio--2
+                    input#task-1(type='checkbox', name='task', value='task')
+                    label(for='task-1')
+                      | Формирование функциональных обязанностей специалиста
+                      .custom-radio__box
+                  .custom-radio.custom-radio--2
+                    input#task-2(type='checkbox', name='task', value='task')
+                    label(for='task-2')
+                      | Проведение собеседований и тестировании кандидатов
+                      .custom-radio__box
+                  .custom-radio.custom-radio--2
+                    input#task-3(type='checkbox', name='task', value='task')
+                    label(for='task-3')
+                      | Рекомендации по эффективной системе фин мотивации (сколько и за какие KPI’s платить)
+                      .custom-radio__box
+                  .custom-radio.custom-radio--2
+                    input#task-4(type='checkbox', name='task', value='task')
+                    label(for='task-4')
+                      | Ежемесячное планирование работы digital-специалиста или команды маркетинга
+                      .custom-radio__box
+                  .custom-radio.custom-radio--2
+                    input#task-5(type='checkbox', name='task', value='task')
+                    label(for='task-5')
+                      | Нет, необходимо только размещение вакансии
+                      .custom-radio__box
+
+
+          .profile-layout__col
+            #addForm.profile-block
+              .profile-block__header.profile-block__header--yellow
+                h2.title-2.profile-block__header-title расскажите кто вам нужен:
+              .profile-block__main
+                .profile-vacancy-form
+                  .formblock
+                    .formgroup.formgroup--2
+                      label Кого вы ищете:
+                      input.input--bordered(type='text', name='positionName', required='', placeholder='Выберите подходящую специализацию')
+                    .formgroup.formgroup--2
+                      label Информация о вакансии
+                      textarea(name='description', placeholder='Опишите, что входит в обязанности сотрудника. Какие качества требуются от сотрудника. ', maxlength='600')
+                    .formgroup.formgroup--2
+                      label Какая заработная плата:
+                      .profile-vacancy-form__salary-block
+                        .profile-vacancy-form__salary
+                          p от
+                          input.input--bordered(name='salaryFrom', type='number', min='0')
+                          p до
+                          input.input--bordered(name='salaryTo', type='number', min='0')
+                        .profile-vacancy-form__salary-info
+                          .custom-radio.custom-radio--3
+                            input#salary-info-new(type='checkbox', name='salaryAfterInterview')
+                            label(for='salary-info-new')
+                              | По итогам собеседования
+                              .custom-radio__box
+                    .formgroup.formgroup--2
+                      label.m-b-0 Тип занятости
+                      .profile-vacancy-form__employment
+                        .custom-radio.custom-radio--3
+                          input#employment-new-1(type='checkbox', name='remote', value='remote')
+                          label(for='employment-new-1')
+                            | Удаленная работа
+                            .custom-radio__box
+                        .custom-radio.custom-radio--3
+                          input#employment-new-2(type='checkbox', name='parttime', value='part-time')
+                          label(for='employment-new-2')
+                            | Партайм
+                            .custom-radio__box
+                        .custom-radio.custom-radio--3
+                          input#employment-new-3(type='checkbox', name='fulltime', value='full-time')
+                          label(for='employment-new-3')
+                            | Фултайм
+                            .custom-radio__box
+                        .custom-radio.custom-radio--3
+                          input#employment-new-4(type='checkbox', name='office', value='office')
+                          label(for='employment-new-4')
+                            | Работа в офисе
+                            .custom-radio__box
+

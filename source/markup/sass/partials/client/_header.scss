@@ -1,0 +1,248 @@
+.main-header {
+ flex: 0 0 auto;
+ @include tablet-mobile {
+  margin-top: 23px;
+ }
+
+ .main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+ }
+
+ .mobile-menu-burger {
+  position: relative;
+  top: auto;
+ }
+
+ .topline-logo {
+  display: none;
+  @include tablet-mobile {
+   display: flex;
+  }
+ }
+}
+
+.main-header-logo {
+ width: 46px;
+ height: 56px;
+ background: url(../img/common/logo.svg) no-repeat center / contain;
+ position: absolute;
+ bottom: -32px;
+ left: calc(50% - 23px);
+ @include tablet-mobile {
+  display: none;
+ }
+ &:before, &:after {
+  content: '';
+  width: 570px;
+  height: 1px;
+  background: #8A8A8A;
+  position: absolute;
+  bottom: 32px;
+ }
+ &:before {
+  left: -608px;
+ }
+ &:after {
+  right: -608px;
+ }
+}
+
+.main-header-menu {
+ display: flex;
+ padding: 17px 0;
+ @include tablet-mobile {
+  display: none;
+ }
+
+ .main-header-menu__item {
+  margin-right: 35px;
+  &:last-child {
+   margin-right: 0;
+  }
+ }
+ .main-header-menu__item-link {
+  font-size: 14px;
+  line-height: 170%;
+ }
+}
+
+.main-header-nav {
+ display: flex;
+ @include tablet-mobile {
+  display: none;
+ }
+
+ .footer-social__wrap {
+  margin-right: 45px;
+ }
+
+ .main-header-nav__item {
+  padding: 22px 0;
+  margin-right: 45px;
+  &:last-child {
+   margin-right: 0;
+  }
+
+  &.main-header-nav__item--login {
+
+   .main-header-nav__item-link {
+    background: url(../img/common/login-icon.svg) no-repeat center right / contain;
+    color: #FFD300;
+    padding-right: 28px;
+   }
+  }
+ }
+ .main-header-nav__item-link {
+  font-size: 12px;
+  text-transform: uppercase;
+ }
+}
+
+.topline-logo {
+ display: flex;
+ align-items: flex-end;
+
+ .topline-logo__icon {
+  width: 47px;
+  height: 56px;
+  background: url(../img/header/logo.svg) no-repeat center / contain;
+  margin-right: 23px;
+  @include mobile {
+   width: 41px;
+   height: 49px;
+   margin-right: 17px;
+  }
+ }
+
+ .topline-logo__content {
+
+ }
+
+ .topline-logo__slogan {
+  width: 220px;
+  height: 17px;
+  background: url(../img/header/slogan.svg) no-repeat center / contain;
+  @include mobile {
+   width: 200px;
+   height: 15px;
+  }
+ }
+ .topline-logo__text {
+  max-width: 235px;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  text-align: left;
+  margin-top: 10px;
+  @include mobile {
+   max-width: 200px;
+   font-size: 11px;
+   line-height: 14px;
+   margin-top: 7px;
+  }
+ }
+}
+
+.topline-menu-2 {
+ display: flex;
+ align-items: center;
+ position: absolute;
+ top: 0;
+ right: 0;
+
+ .topline-menu-2__item {
+  margin-right: 35px;
+  @include tablet-mobile {
+   display: none;
+  }
+  &:last-child {
+   margin-right: 0;
+  }
+
+  &.topline-menu-2__item--registration, &.topline-menu-2__item--login {
+   @include tablet-mobile {
+    display: block;
+   }
+  }
+  &.topline-menu-2__item--registration {
+   border-left: 1px solid rgba(255,255,255,0.2);
+   padding-left: 35px;
+   @include tablet-mobile {
+    border-left: none;
+    padding: 0;
+   }
+  }
+ }
+
+ .topline-menu-2__link {
+  font-size: 12px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: block;
+  color: #fff;
+  transition: 0.2s ease;
+ }
+
+ .topline-menu-2__btn {
+  display: block;
+  background: #FFD300;
+  box-shadow: 0px 2px 20px rgba(255, 211, 0, 0.25);
+  font-family: "DIN Pro", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 11px 36px;
+ }
+}
+
+.topline {
+ @include tablet-mobile {
+  position: static;
+ }
+}
+.topline-menu-2 {
+ @include tablet-mobile {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  top: auto;
+  bottom: 0;
+ }
+
+ .topline-menu-2__item {
+  @include tablet-mobile {
+   margin: 2px 0;
+  }
+  &.topline-menu-2__item--registration {
+   @include tablet-mobile {
+    order: 2;
+   }
+  }
+  &.topline-menu-2__item--login {
+   @include tablet-mobile {
+    order: 1;
+   }
+  }
+
+  .topline-menu-2__btn {
+   @include tablet-mobile {
+    width: 160px;
+   }
+  }
+
+  .topline-menu-2__link {
+   @include tablet-mobile {
+    font-size: 10px;
+    line-height: 13px;
+   }
+  }
+ }
+}

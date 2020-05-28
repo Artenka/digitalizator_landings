@@ -1,0 +1,150 @@
+.section-intro-2 {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background: url(../img/home/intro-2/intro-2-illustration-left.svg) no-repeat top 66px left -156px;
+ @include mobile {
+  background: url(../img/home/intro-2/intro-2-illustration-left.svg) no-repeat top 60px left -78px / auto 300px;
+ }
+
+ > .main-wrapper {
+  flex: 1;
+ }
+}
+
+.intro-2 {
+ @extend .rating;
+ margin: 115px 0 280px;
+ @include mobile {
+  margin: 50px 0 90px;
+ }
+
+ .intro-2__content {
+  max-width: 730px;
+ }
+
+ .intro-2__text {
+  font-size: 30px;
+  line-height: 140%;
+  margin-top: 20px;
+  @include mobile {
+   font-size: 18px;
+   margin-top: 10px;
+  }
+ }
+
+ .intro-2__btn {
+  margin-top: 78px;
+  @include tablet {
+   margin-bottom: 40px;
+  }
+  @include mobile {
+   margin-top: 40px;
+  }
+ }
+
+ .devices-illustration {
+  @include desktop-only {
+   top: -35px!important;
+  }
+  &:before {
+   content: '';
+   width: 619px;
+   height: 465px;
+   background: url(../img/home/intro-2/devices-dots.svg) no-repeat center / contain;
+   position: absolute;
+   bottom: -82px;
+   left: 252px;
+   z-index: -1;
+   @include mobile {
+    width: 400px;
+    height: 320px;
+    bottom: -45px;
+    left: 180px;
+   }
+  }
+
+  .devices-illustration__bg-1 {
+   width: 400px;
+   height: 400px;
+   background: url(../img/home/intro-2/devices-illustration-1.svg) no-repeat center / contain;
+   position: absolute;
+   top: 90px;
+   left: -70px;
+   z-index: 0;
+   @include tablet {
+    width: 320px;
+    height: 320px;
+   }
+   @include mobile {
+    width: 240px;
+    height: 240px;
+    top: 130px;
+    left: -10px;
+   }
+  }
+  .devices-illustration__bg-2 {
+   width: 198px;
+   height: 198px;
+   background: url(../img/home/intro-2/devices-illustration-2.svg) no-repeat center / contain;
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   z-index: 0;
+   @include mobile {
+    width: 120px;
+    height: 120px;
+   }
+  }
+  .devices-illustration__bg-3 {
+   width: 124px;
+   height: 124px;
+   background: url(../img/home/intro-2/devices-illustration-3.svg) no-repeat center / contain;
+   position: absolute;
+   top: -30px;
+   left: 270px;
+   z-index: 3;
+   @include mobile {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+   }
+  }
+  .devices-illustration__bg-4 {
+   width: 322px;
+   height: 480px;
+   background: url(../img/home/intro-2/devices-illustration-4.svg) no-repeat center / contain;
+   position: absolute;
+   bottom: -80px;
+   left: -100px;
+   z-index: 3;
+   @include mobile {
+    width: 220px;
+    height: 320px;
+    bottom: -30px;
+    left: -50px;
+   }
+  }
+ }
+}
+
+.intro-2-title {
+ font-family: DINProCond, sans-serif;
+ font-weight: bold;
+ font-size: 80px;
+ line-height: 120%;
+ text-transform: uppercase;
+ color: #FFD300;
+ @include mobile {
+  font-size: 38px;
+ }
+
+ &.intro-2-title--2 {
+  text-align: center;
+  padding-bottom: 90px;
+  @include mobile {
+   padding-bottom: 60px;
+  }
+ }
+}

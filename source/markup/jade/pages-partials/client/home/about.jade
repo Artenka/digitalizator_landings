@@ -1,0 +1,65 @@
+section.section.section-about#about
+  .main-wrapper
+    .about
+      .about-left
+        h2.subtitle.about-left__title Кто и почему
+        p.about-left__text становится постоянными участниками “Digitalizator”?
+        .about-hover-block(data-item="1")
+          h3.about-hover-block__title Digital-специалисты, фрилансеры, агентства:
+          ul.about-hover-block__list
+            li Желание стать частью трендового сообщества в digital-сфере
+            li Нетворкинг с единомышленниками из сферы Digital-маркетинга (чат)
+            li Размещение информации о себе в разделе “Подрядчики”
+            li Доступ к разделу “Вакансии” и возможность найти работу/проект
+            li Доступ к обучающему контенту по digital-маркетингу от “Digitalizator”
+        .about-hover-block(data-item="2")
+          h3.about-hover-block__title Предприниматели  и руководители бизнеса
+          ul.about-hover-block__list
+            li Желание стать частью трендового сообщества в digital-сфере
+            li Мгновенный доступ к специалистам из сферы Digital-маркетинга
+            li Доступ к образовательному контенту по менеджменту и стратегии в Digital
+            li Размещение вакансий на платформе и поиск специалистов/подрядчиков
+            li Возможность выстроить грамотно команду и стратегию в Digital-маркетинге
+      .about-right
+        .about-right-item(data-item="1")
+          h3.about-right-item__title Digital-специалисты,<br> фрилансеры,<br> агентства
+            .about-right-item__number 01
+        .about-right-item(data-item="2")
+          h3.about-right-item__title Предприниматели<br> и руководители<br> бизнеса
+            .about-right-item__number 02
+
+  script.
+    $(function(){
+      if ($(window).width() > 1260) {
+        $('.about-right-item').on('mouseover', function () {
+          $(this).siblings().addClass('about-right-item--disabled');
+          $('.about-hover-block[data-item=' + $(this).data('item') + ']').addClass('about-hover-block--active');
+        }).on('mouseout', function () {
+          $('.about-right-item--disabled').removeClass('about-right-item--disabled');
+          $('.about-hover-block--active').removeClass('about-hover-block--active');
+        });
+      } else if ($(window).width() < 1260 && $(window).width() > 720) {
+        $('.about-right-item').on('touchstart', function () {
+          if($(this).hasClass('about-right-item--active')) {
+            $(this).removeClass('about-right-item--active');
+            $('.about-right-item--disabled').removeClass('about-right-item--disabled');
+            $('.about-hover-block--active').removeClass('about-hover-block--active');
+          } else if($(this).hasClass('about-right-item--disabled')) {
+            $('.about-right-item--active').removeClass('about-right-item--active');
+            $('.about-right-item--disabled').removeClass('about-right-item--disabled');
+            $('.about-hover-block--active').removeClass('about-hover-block--active');
+            $(this).addClass('about-right-item--active').siblings().addClass('about-right-item--disabled');
+            $('.about-hover-block[data-item=' + $(this).data('item') + ']').addClass('about-hover-block--active');
+            $([document.documentElement, document.body]).animate({
+              scrollTop: $("#about").offset().top
+            }, 1000);
+          } else {
+            $(this).addClass('about-right-item--active').siblings().addClass('about-right-item--disabled');
+            $('.about-hover-block[data-item=' + $(this).data('item') + ']').addClass('about-hover-block--active');
+            $([document.documentElement, document.body]).animate({
+              scrollTop: $("#about").offset().top
+            }, 1000);
+          }
+        });
+      }
+    });

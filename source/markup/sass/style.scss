@@ -1,0 +1,28 @@
+// external libraries scss files
+@import 'lib/slick';
+@import 'lib/intlTelInput';
+@import 'lib/spacing';
+// common scss files
+@import 'common/reset';
+@import 'common/global';
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/mixins';
+// modules scss files
+@import 'modules/platform/index';
+@import 'modules/platform/profile';
+@import 'modules/platform/profile-new';
+@import 'modules/client/index';
+@import 'modules/client/home';
+// partials scss files
+@import 'partials/platform/common';
+//@import 'partials/platform/form';
+@import 'partials/platform/form';
+@import 'partials/platform/btns';
+@import 'partials/client/common';
+@import 'partials/client/btns';
+@import 'partials/client/header';
+@import 'partials/client/footer';
+@import 'partials/client/popups';
+@import 'partials/client/slick';
+@import 'partials/client/mobile-menu';

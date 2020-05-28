@@ -1,0 +1,64 @@
+section.section.section-speaks
+  .main-wrapper
+    .speaks
+      h2.speaks__title нам доверяют:
+      .speaks-slider.speaks-slider-2
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-1.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-2.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-3.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-4.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-5.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-6.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-7.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-8.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-9.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-10.png").speaks__image
+        .speaks-slide
+          .speaks-slide__inner
+            img(src="img/home/trust/trust-11.png").speaks__image
+
+
+  script.
+    $(function () {
+      $('.speaks-slider-2').slick({
+        slidesToShow: 5,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        swipe: true,
+        responsive: [
+          {
+            breakpoint: 1260,
+            settings: {
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 720,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      })
+    });

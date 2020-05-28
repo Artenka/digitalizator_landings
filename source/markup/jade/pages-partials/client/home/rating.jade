@@ -1,0 +1,48 @@
+section.section.section-rating
+  .main-wrapper
+    .rating
+      h2.subtitle.rating__title Раздел «Рейтинг подрядчиков»
+      p.rating__text В нем могут публиковаться фрилансеры, наемные специалисты, агентства, которые предоставляют такие услуги как:
+      ul.rating-list.rating-list-1
+        li.rating-item Таргетированная и Контекстная реклама
+        li.rating-item Контент-маркетинг
+        li.rating-item Комплексный digital-маркетинг
+        li.rating-item Чат боты & Месенджеры
+        li.rating-item SMM-продвижение
+        li.rating-item.br-lg-md E-mail маркетинг
+        li.rating-item Брендинг и дизайн
+        li.rating-item.br-lg-md Видеосъемка и монтаж
+        li.rating-item SEO-продвижение
+        li.rating-item.br-lg-md IT-услуги
+        li.rating-item.rating-item--text и многое другое ...
+      .devices-illustration
+        .laptop-illustration
+          .laptop-illustration__inner
+            video.video-bg(autoplay loop muted playsinline)
+              source(src='videos/home/rating-desktop.mp4', type='video/mp4')
+        .phone-illustration
+          .phone-illustration__inner
+            video.video-bg(autoplay loop muted playsinline)
+              source(src='videos/home/rating-mob.mp4', type='video/mp4')
+      p.rating__text-2.text-2 <span>Рейтинг формируется</span> на основе алгоритма, который зависит от активности участника на платформе, а также других внутренних правил платформы.
+      a(href="https://platform.digitalizator.club/registration").btn.rating__btn.registration-link Выбрать Пакет
+
+
+  script.
+    $(function(){
+      ratingItemPulsing($('.rating-list-1 .rating-item'));
+      ratingItemPulsing($('.rating-list-2 .rating-item'));
+      ratingItemPulsing($('.rating-list-3 .rating-item'));
+    });
+
+    function ratingItemPulsing($element){
+      var random, $randomElement;
+      setInterval(function () {
+        random = Math.floor(Math.random() * $element.length);
+        $randomElement = $element.eq(random);
+        $randomElement.addClass('rating-item--active');
+        setTimeout(function () {
+          $randomElement.removeClass('rating-item--active');
+        }, 1000);
+      }, 3000);
+    }

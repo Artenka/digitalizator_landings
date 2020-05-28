@@ -1,0 +1,48 @@
+.section-soc-reviews {
+ background: #fff;
+ padding: 112px 0 45px;
+ @include mobile {
+  padding: 50px 0;
+ }
+}
+
+.soc-reviews {
+ color: #202020;
+}
+
+.soc-reviews-title {
+ max-width: 480px;
+ color: #202020;
+ position: relative;
+ &:before {
+  @extend .bg-text;
+  content: 'отзывы';
+  color: rgba(0,0,0,0.5);
+ }
+}
+
+.soc-reviews-slider {
+ padding: 0 26px 80px;
+ margin-top: 67px;
+ @include mobile {
+  padding: 0 26px 40px;
+  margin-top: 40px;
+ }
+}
+
+.soc-reviews-slide {
+ padding: 0 16px;
+ @include mobile {
+  padding: 0;
+ }
+}
+
+.soc-review {
+
+ img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #E9E9E9;
+ }
+}

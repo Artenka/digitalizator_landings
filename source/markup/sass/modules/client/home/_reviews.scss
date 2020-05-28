@@ -1,0 +1,98 @@
+.section-reviews {
+ background: #1D1D1D;
+ padding: 110px 0 55px;
+ @include mobile {
+  padding: 50px 0;
+ }
+}
+
+.reviews {
+
+}
+
+.reviews-slider-layout {
+ margin-top: 46px;
+ position: relative;
+}
+
+.reviews-slider-2 {
+ width: 1440px;
+ position: relative;
+ left: 0;
+}
+
+.reviews-slide {
+ width: 320px;
+ display: block;
+ cursor: pointer;
+ margin-right: 40px;
+
+ .reviews-slide__thumb {
+  height: 210px;
+  background: no-repeat center / cover, #222;
+  position: relative;
+ }
+
+ .reviews-slide__play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  &:before {
+   content: '';
+   width: 126%;
+   height: 126%;
+   border: 1px solid #C4C4C4;
+   border-radius: 50%;
+   position: absolute;
+   top: -13%;
+   left: -13%;
+  }
+  &:after {
+   content: '';
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 7px 0 7px 7px;
+   border-color: transparent transparent transparent #fff;
+   position: absolute;
+   top: calc(50% - 7px);
+   left: calc(50% - 3px);
+  }
+ }
+
+ .reviews-slide__name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #F7F7F7;
+  margin-top: 18px;
+ }
+ .reviews-slide__position {
+  font-size: 14px;
+  line-height: 117.8%;
+  color: #F7F7F7;
+  margin-top: 3px;
+ }
+}
+
+.reviews-title {
+ max-width: 570px;
+ position: relative;
+ &:before {
+  @extend .bg-text;
+  content: 'отзывы';
+ }
+}
+
+.reviews-btn-layout {
+ text-align: center;
+ margin: 90px auto 0;
+ @include mobile {
+  margin-top: 50px;
+ }
+}

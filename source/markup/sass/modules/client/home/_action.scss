@@ -1,0 +1,59 @@
+.section-action {
+ padding: 180px 0 107px;
+ position: relative;
+ @include mobile {
+  padding: 120px 0 70px;
+ }
+ &:before {
+  content: 'действуйте!';
+  width: 100%;
+  font-family: DINProCond, sans-serif;
+  font-weight: 500;
+  font-size: 172px;
+  line-height: 202px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.05;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mobile {
+   font-size: 100px;
+   line-height: 140px;
+  }
+ }
+}
+
+.action {
+ font-family: DINProCond, sans-serif;
+ text-align: center;
+ position: relative;
+ z-index: 2;
+
+ .action__subtitle {
+  max-width: 1100px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 auto;
+  @include mobile {
+   font-size: 28px;
+  }
+ }
+
+ .action__title {
+  font-weight: bold;
+  font-size: 81px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FFD300;
+  margin: 8px 0 70px;
+  @include mobile {
+   font-size: 42px;
+  }
+ }
+}

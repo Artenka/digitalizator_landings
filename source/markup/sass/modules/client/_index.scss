@@ -1,0 +1,322 @@
+* {
+ outline: none!important;
+}
+
+html {
+ min-height: 100vh;
+}
+
+body {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ background: #000;
+ font-family: DINPro, sans-serif;
+ color: #fff;
+ font-size: 16px;
+ line-height: 160%;
+}
+
+.main {
+ flex: 1 0 auto;
+ position: relative;
+ overflow-x: hidden;
+}
+
+.main-wrapper, .container {
+ width: 1260px;
+ margin: 0 auto;
+ @include tablet {
+  width: 710px;
+ }
+ @include mobile {
+  width: 320px;
+ }
+}
+
+.section {
+ position: relative;
+
+ &.section--yellow {
+  background: #FFD300;
+  color: #000;
+
+  .subtitle {
+   color: #000;
+  }
+ }
+}
+
+.br-lg {
+ display: block;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp-md {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lp-sm {
+ display: none;
+ @include laptop {
+  display: block;
+ }
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-lg-md {
+ display: block;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-lg--sm {
+ display: block;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-md-sm {
+ display: none;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-md {
+ display: none;
+ @include tablet {
+  display: block;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.br-sm {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: block;
+ }
+}
+
+.br-sm-text {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-lg {
+ display: inline;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp-md {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-lp-sm {
+ display: none;
+ @include laptop {
+  display: inline;
+ }
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-lg-md {
+ display: inline;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-md-sm {
+ display: none;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.inline-md {
+ display: none;
+ @include tablet {
+  display: inline;
+ }
+ @include mobile {
+  display: none;
+ }
+}
+
+.inline-sm {
+ display: none;
+ @include tablet {
+  display: none;
+ }
+ @include mobile {
+  display: inline;
+ }
+}
+
+.hidden {
+ display: none;
+}
+
+.clear {
+ display: table;
+ clear: both;
+}
+
+p, h1, h2, h3, h4, h5, h6, img {
+ display: block;
+}
+
+a {
+ font-family: Dinpro, sans-serif;
+ color: #fff;
+ text-decoration: none;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+em {
+ font-style: italic;
+}
+
+b, strong {
+ font-weight: 700;
+}
+
+button {
+ border: none;
+ display: block;
+ background: transparent;
+ outline: none;
+ font-family: Dinpro, sans-serif;
+ padding: 0;
+ cursor: pointer;
+ transition: 0.5s;
+}
+
+input, textarea, select, .input, .textarea, .select {
+ display: block;
+ width: 100%;
+ //border: none;
+ background: transparent;
+ outline: none;
+ transition: 0.5s;
+}
+
+textarea {
+ min-height: 140px;
+ resize: none;
+ text-transform: none;
+}
+
+select {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+}
+
+label {
+ display: block;
+}
+
+::placeholder {
+ color: #B4B4B4;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ transition: background-color 5000s ease-in-out 0s;
+}

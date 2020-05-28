@@ -1,0 +1,39 @@
+.mobile-menu
+  .container
+    .mobile-menu-burger
+    .mobile-menu-inner
+      .topline-logo
+        .topline-logo__icon
+        .topline-logo__content
+          .topline-logo__slogan
+          .topline-logo__text Online-платформа по созданию команд digital-маркетинга
+      ul.topline-menu-2
+        li.topline-menu-2__item
+          a.topline-menu-2__link(href="#modal-form") Найти маркетолога
+        li.topline-menu-2__item
+          a.topline-menu-2__link(href="/express") Услуги для бизнеса
+        li.topline-menu-2__item
+          a.topline-menu-2__link(href="https://platform.digitalizator.club/registration") Выбрать Пакет
+        li.topline-menu-2__item.topline-menu-2__item--divider
+        li.topline-menu-2__item.topline-menu-2__item--registration
+          a.topline-menu-2__link.registration-link(href="https://platform.digitalizator.club/registration") регистрация
+        li.topline-menu-2__item.topline-menu-2__item--login
+          a.topline-menu-2__btn(href="https://platform.digitalizator.club/login") вход
+      .footer-social__wrap
+        a.footer-social__link.instagram(href='https://instagram.com/edkuzm1n', target='_blank')
+          img(src='img/ig.svg')
+        a.footer-social__link.youtube(href='https://www.youtube.com/c/digitalizator', target='_blank')
+          img(src='img/ut.svg')
+        a.footer-social__link.telegram(href='https://t.me/edkuzmin', target='_blank')
+          img(src='img/tg.svg')
+        a.footer-social__link.linkedin(href='https://www.linkedin.com/company/digitterra', target='_blank')
+          img(src='img/linkedin.svg')
+
+
+script.
+  $(function(){
+    $('.mobile-menu-burger').click(function(){
+      $(this).toggleClass('mobile-menu-burger--active');
+      $('.mobile-menu').toggleClass('mobile-menu--active');
+    });
+  });

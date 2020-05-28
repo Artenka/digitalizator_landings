@@ -1,0 +1,104 @@
+.section-intro {
+ position: relative;
+
+ > .main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+ }
+
+ .mobile-menu {
+  @include tablet-mobile {
+   display: block;
+  }
+ }
+
+ .video-bg {
+  max-width: initial;
+  max-height: initial;
+ }
+}
+
+
+.intro {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 100px 0 40px;
+ @include mobile {
+  padding: 40px 0 60px;
+ }
+
+ .intro__subtitle {
+  color: #fff;
+  font-size: 32px;
+  @include mobile {
+   font-size: 16px;
+  }
+
+  span {
+   color: #FFD300;
+  }
+ }
+ .intro__title {
+  width: 820px;
+  height: 88px;
+  background: url(../img/home/intro/slogan.svg) no-repeat center / contain;
+  margin-top: 52px;
+  @include tablet {
+   width: 640px;
+   height: 68px;
+   margin-top: 40px;
+  }
+  @include mobile {
+   width: 300px;
+   height: 32px;
+   margin-top: 25px;
+  }
+ }
+ .intro__text {
+  max-width: 710px;
+  font-size: 20px;
+  margin-top: 34px;
+  @include tablet {
+   max-width: 640px;
+   font-size: 18px;
+   margin-top: 25px;
+  }
+  @include mobile {
+   font-size: 14px;
+   margin-top: 15px;
+  }
+
+  span {
+   color: #FFD300;
+  }
+ }
+
+ .intro__btn {
+  width: 300px;
+  margin: 0 40px;
+  @include mobile {
+   width: 100%;
+   margin: 10px 0;
+  }
+ }
+
+ .intro__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  @include mobile {
+   width: 240px;
+   flex-direction: column;
+   margin-top: 50px;
+  }
+ }
+}

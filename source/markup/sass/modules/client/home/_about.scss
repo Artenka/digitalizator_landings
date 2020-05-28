@@ -1,0 +1,272 @@
+.section-about {
+
+ .main-wrapper {
+
+ }
+}
+
+.about {
+ min-height: 100vh;
+ display: flex;
+ @include tablet-mobile {
+  flex-direction: column;
+ }
+ @include mobile {
+  min-height: initial;
+ }
+}
+
+.about-left {
+ width: 505px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: center;
+ padding: 110px 0 120px;
+ position: relative;
+ @include tablet-mobile {
+  width: 100%;
+ }
+ @include tablet {
+  padding: 120px 0 200px;
+ }
+ @include mobile {
+  padding: 50px 0;
+ }
+ &:before {
+  content: '';
+  width: 72px;
+  height: 590px;
+  background: url(../img/home/about/shadow.svg) no-repeat center / contain;
+  position: absolute;
+  top: calc(50% - 295px);
+  right: -36px;
+  @include tablet-mobile {
+   transform: rotate(90deg);
+   transform-origin: 0 0;
+   top: calc(100% - 36px);
+  }
+  @include mobile {
+   height: 320px;
+  }
+ }
+ &:after {
+  content: '';
+  width: 72px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include tablet-mobile {
+   width: 100vw;
+   height: 36px;
+   right: calc(50% - 50vw);
+  }
+ }
+
+ .about-left__title {
+  position: relative;
+  &:before {
+   @extend .bg-text;
+   content: 'для кого';
+   width: 650px;
+  }
+ }
+
+ .about-left__text {
+  font-size: 30px;
+  line-height: 160%;
+  @include mobile {
+   font-size: 20px;
+  }
+ }
+}
+
+.about-right {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 0 115px 0 100px;
+ position: relative;
+ @include tablet-mobile {
+  width: 100%;
+ }
+ @include tablet {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 0 80px;
+ }
+ @include mobile {
+  padding: 30px 0 30px;
+ }
+}
+
+.about-right-item {
+ border-bottom: 1px solid #464646;
+ transition: 0.4s;
+ cursor: pointer;
+ @include tablet-mobile {
+  border: none;
+ }
+ &:last-child {
+  border-bottom: 0;
+ }
+
+ .about-right-item__title {
+  font-family: DINProCond, sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 30px 0;
+  position: relative;
+  transition: 0.4s;
+  @include tablet {
+   font-size: 32px;
+   padding-left: 35px;
+  }
+  @include mobile {
+   font-size: 32px;
+   padding: 24px 0 350px;
+  }
+
+  br {
+   @include mobile {
+    display: none;
+   }
+  }
+ }
+
+ .about-right-item__number {
+  width: 45px;
+  font-size: 18px;
+  line-height: 108%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 58px;
+  left: -45px;
+  transition: 0.4s;
+  @include tablet {
+   width: 35px;
+   top: 48px;
+   left: 0;
+  }
+  @include mobile {
+   width: 25px;
+   font-size: 12px;
+   top: 0;
+   left: 0;
+  }
+ }
+
+ &.about-right-item--disabled {
+
+  .about-right-item__title {
+   opacity: 0.2;
+  }
+ }
+}
+
+.about-hover-block {
+ width: calc(50vw - 125px);
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ background: #FFD300;
+ padding: 0 80px 0 calc(50vw - 630px);
+ position: absolute;
+ top: 0;
+ right: 50vw;
+ z-index: -1;
+ transition: 0.4s;
+ opacity: 0;
+ @include tablet-mobile {
+  transition: 0s;
+ }
+ @include tablet {
+  width: 100vw;
+  padding: 40px calc(50vw - 355px);
+ }
+ @include mobile {
+  width: 425px;
+  height: auto;
+  padding: 26px 90px 26px 20px;
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+ }
+ &[data-item="1"] {
+  @include mobile {
+   top: 375px;
+  }
+ }
+ &[data-item="2"] {
+  @include mobile {
+   top: 850px;
+  }
+ }
+
+ .about-hover-block__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #0B0B0B;
+  @include mobile {
+   display: none;
+   font-size: 18px;
+  }
+ }
+
+ .about-hover-block__list {
+  margin-top: 42px;
+  @include tablet {
+   margin-top: 30px;
+  }
+  @include mobile {
+   margin-top: 0;
+  }
+
+  li {
+   font-size: 18px;
+   line-height: 140%;
+   color: #202020;
+   padding-left: 17px;
+   margin-bottom: 20px;
+   position: relative;
+   @include tablet {
+    margin-bottom: 15px;
+   }
+   @include mobile {
+    font-size: 14px;
+    margin-bottom: 10px;
+   }
+   &:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #202020;
+    position: absolute;
+    top: 10px;
+    left: 0;
+   }
+   &:last-child {
+    margin-bottom: 0;
+   }
+  }
+ }
+
+ &.about-hover-block--active {
+  right: 0;
+  opacity: 1;
+  z-index: 2;
+  @include tablet-mobile {
+   right: calc(50% - 50vw);
+  }
+ }
+}
